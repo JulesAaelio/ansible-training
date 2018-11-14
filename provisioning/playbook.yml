@@ -1,4 +1,10 @@
-- name: test
+- name: symfony
   hosts: all
   gather_facts: no
-  become_user: true
+  become: yes
+  roles:
+    - common
+    - nginx
+  vars:
+    application_folder: symfonyapp
+    nginx_user: nginx
