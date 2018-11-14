@@ -1,0 +1,4 @@
+- name: test
+  hosts: all
+  gather_facts: no
+  become_user: true
