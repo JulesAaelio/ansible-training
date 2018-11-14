@@ -1,0 +1,17 @@
+- name: install mysql
+  apt: pkg={{ item }} state=latest
+  with_items:
+    - mysql-server
+  tags:
+    - mysql
+
+- name: copy init script
+  template:
+    src: init.sql
+    dest: /init.sql
+
+
+- name: init database
+  raw: mysql -u root < /init.sql
+  tags:
+    - mysql

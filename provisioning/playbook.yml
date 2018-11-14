@@ -6,7 +6,9 @@
     - common
     - nginx
     - php-fpm
+    - mysql
   vars:
     application_folder: symfonyapp
     nginx_user: www-data
     php_fpm_socket : /run/php/php7.2-fpm.sock
+    mysql_password: p@ssw0rd
