@@ -5,6 +5,8 @@
   roles:
     - common
     - nginx
+    - php-fpm
   vars:
     application_folder: symfonyapp
-    nginx_user: nginx
+    nginx_user: www-data
+    php_fpm_socket : /run/php/php7.2-fpm.sock
